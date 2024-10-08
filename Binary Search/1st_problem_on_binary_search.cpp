@@ -4,6 +4,11 @@ using namespace std;
 int search(int x[], int first, int last, int target)
 {
     int mid = (first + last)/2;
+
+    if (first > last){
+        return -1;
+    }
+
     if (target == x[mid]){
         return mid;
     }
@@ -17,6 +22,10 @@ int search(int x[], int first, int last, int target)
     // else if (mid == last -1){
     //     if 
     // }
+
+    // if (mid == last || mid == first){
+    //     return -1;
+    // }
     
 }
 
@@ -29,7 +38,7 @@ int main()
 
     int size = sizeof(x) / sizeof(x[0]);
 
-    int y = search (x,0,size-1,3);
+    int y = search (x,0,size-1,18);
 
     cout<<"Index for the target = "<<y;
 
